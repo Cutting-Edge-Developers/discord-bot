@@ -1,0 +1,15 @@
+{
+  "baseBranch": "origin/main",
+  "pipeline": {
+    "serve": {},
+    "test": {},
+    "lint": {},
+    "format": {},
+    "changelog": {
+      "outputs": ["CHANGELOG.md"]
+    },
+    "publish": {
+      "dependsOn": ["test", "lint", "format", "changelog"]
+    }
+  }
+}

@@ -1,1 +1,5 @@
-# discord-bot
+# Discord Bot
+
+## Yapılacaklar
+
+## Yapılanlar

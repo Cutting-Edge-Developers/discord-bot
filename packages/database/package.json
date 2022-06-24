@@ -1,0 +1,52 @@
+{
+  "name": "@cuttingedge/database",
+  "version": "0.1.0",
+  "description": "Cuttig Edge Bot",
+  "private": true,
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "lint": "prettier --check . && eslint src",
+    "format": "prettier --write . && eslint src --fix",
+    "changelog": "git cliff --prepend ./CHANGELOG.md -l -c ./cliff.toml -r ../../ --include-path 'packages/database/*'"
+  },
+  "keywords": [
+    "Cutting Edge Developers Discord Bot Database",
+    "Cutting Edge Discord Bot Database",
+    "Cutting Edge Developers",
+    "Cutting Edge",
+    "CED Discord Bot Database",
+    "CED Bot Database",
+    "CED",
+    "Discord",
+    "Developers",
+    "Discord Bot Database",
+    "Bot",
+    "Database"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Cutting-Edge-Developers/discord-bot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Cutting-Edge-Developers/discord-bot/issues"
+  },
+  "dependencies": {
+    "mongoose": "^6.4.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.18.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsdoc": "^39.3.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0"
+  },
+  "engines": {
+    "node": ">=16.15.1"
+  },
+  "author": "Yankı Küçük <kendinikertenkelebek@me.com> (https://twitter.com/leithrien)",
+  "contributors": [
+    "Yankı Küçük <kendinikertenkelebek@me.com>"
+  ],
+  "license": "CC BY-NC-ND 4.0"
+}

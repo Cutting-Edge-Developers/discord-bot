@@ -1,0 +1,19 @@
+chore:
+  - any: ['*']
+    all: ['!packages/*', '!packages/**/*']
+
+'packages:cleaner':
+  - packages/cleaner/*
+  - packages/cleaner/**/*
+
+'packages:bot':
+  - packages/bot/*
+  - packages/bot/**/*
+
+'packages:engine':
+  - packages/engine/*
+  - packages/engine/**/*
+
+'packages:database':
+  - packages/database/*
+  - packages/database/**/*
