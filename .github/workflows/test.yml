@@ -27,11 +27,8 @@ jobs:
       - name: Install dependencies
         run: yarn --immutable --mode=skip-build
 
-      - name: ESLint
+      - name: Prettier & ESLint
         run: yarn lint --cache-dir=".turbo"
-
-      - name: Tests
-        run: yarn test --cache-dir=".turbo"
 
       - name: Format
         run: yarn format --cache-dir=".turbo"
