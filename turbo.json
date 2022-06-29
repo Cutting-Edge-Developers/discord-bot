@@ -6,9 +6,6 @@
     "format": {},
     "changelog": {
       "outputs": ["CHANGELOG.md"]
-    },
-    "publish": {
-      "dependsOn": ["lint", "format", "changelog"]
     }
   }
 }

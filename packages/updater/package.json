@@ -1,5 +1,5 @@
 {
-  "name": "@cuttingedge/database",
+  "name": "@cuttingedge/updater",
   "version": "0.1.0",
   "description": "Cuttig Edge Bot",
   "private": true,
@@ -8,21 +8,21 @@
   "scripts": {
     "lint": "prettier --check . && eslint src",
     "format": "prettier --write . && eslint src --fix",
-    "changelog": "git cliff --prepend ./CHANGELOG.md -l -c ./cliff.toml -r ../../ --include-path 'packages/database/*'"
+    "changelog": "git cliff --prepend ./CHANGELOG.md -l -c ./cliff.toml -r ../../ --include-path 'packages/updater/*'"
   },
   "keywords": [
-    "Cutting Edge Developers Discord Bot Database",
-    "Cutting Edge Discord Bot Database",
+    "Cutting Edge Developers Discord Bot Updater",
+    "Cutting Edge Discord Bot Updater",
     "Cutting Edge Developers",
     "Cutting Edge",
-    "CED Discord Bot Database",
-    "CED Bot Database",
+    "CED Discord Bot Updater",
+    "CED Bot Updater",
     "CED",
     "Discord",
     "Developers",
-    "Discord Bot Database",
+    "Discord Bot Updater",
     "Bot",
-    "Database"
+    "Updater"
   ],
   "repository": {
     "type": "git",
@@ -32,7 +32,7 @@
     "url": "https://github.com/Cutting-Edge-Developers/discord-bot/issues"
   },
   "dependencies": {
-    "mongoose": "^6.4.0"
+    "@cuttingedge/database": "workspace:^"
   },
   "devDependencies": {
     "eslint": "^8.18.0",

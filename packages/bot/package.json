@@ -46,7 +46,8 @@
     "eslint-plugin-jsdoc": "^39.3.3",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "nodemon": "^2.0.18"
+    "nodemon": "^2.0.18",
+    "prettier": "^2.7.1"
   },
   "engines": {
     "node": ">=16.15.1"
