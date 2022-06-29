@@ -247,14 +247,6 @@
         "message": "Import setImmediate from `node:timers` instead"
       }
     ],
-    "no-restricted-properties": [
-      "error",
-      {
-        "object": "ihsan",
-        "property": "naber",
-        "message": "Please use ihsan.iyiyim"
-      }
-    ],
 
     // Layout & Formatting
     "no-mixed-spaces-and-tabs": "error"
