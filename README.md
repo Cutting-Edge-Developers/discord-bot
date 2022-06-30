@@ -9,11 +9,13 @@
   <img src="https://img.shields.io/github/package-json/v/Cutting-Edge-Developers/discord-bot/master?style=flat-square" alt="Version">
   <img src="https://img.shields.io/github/issues/Cutting-Edge-Developers/discord-bot?style=flat-square" alt="Issues">
   <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/Cutting-Edge-Developers/discord-bot?style=flat-square" alt="Top Language">
+  <img src="https://img.shields.io/github/languages/code-size/Cutting-Edge-Developers/discord-bot?style=flat-square" alt="Code Size">
 </p>
 <p align="center">
-  <img src="https://img.shields.io/github/languages/code-size/Cutting-Edge-Developers/discord-bot?style=flat-square" alt="Code Size">
   <img src="https://img.shields.io/github/contributors/Cutting-Edge-Developers/discord-bot?style=flat-square" alt="Contributors">
   <img alt="Discord" src="https://img.shields.io/discord/984106372264230964?style=flat-square" alt="Discord">
+  <img alt="GitHub Sponsors" src="https://img.shields.io/github/sponsors/Cutting-Edge-Developers?style=flat-square">
+  <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/Cutting-Edge-Developers/discord-bot?style=flat-square">
 </p>
 
 ## Hakkında
