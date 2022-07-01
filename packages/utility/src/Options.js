@@ -6,14 +6,15 @@ dotenv.config();
  * Options for the client.
  *
  * @typedef {object} ClientOptions
- * @property {string} DEBUG_MODE Debug mode status for client
- * @property {string} DEVELOPMENT Debug mode status for client
- * @property {string} CLIENT_ACCESS_TOKEN Debug mode status for client
- * @property {string} DB_IP Database IP
- * @property {string|number} DB_PORT Database port number
- * @property {string} DB_NAME Database name
- * @property {string} DB_USERNAME Database username
- * @property {string} DB_PASSWORD Database password for access
+ * @property {object} settings General settings for the engine
+ * @property {boolean} settings.debugMode Debug mode status for client
+ * @property {string} clientAccessToken Client access token for connect to Discord WebSocket
+ * @property {object} db Database settings
+ * @property {string} db.ip Database IP
+ * @property {string|number} db.port Database port number
+ * @property {string} db.name Database name
+ * @property {string} db.username Database username for access
+ * @property {string} db.password Database password for access
  */
 
 /**
@@ -26,29 +27,20 @@ export class Options extends null {
    * @returns {ClientOptions}
    */
   static get get() {
-    return this.#mergeOptions();
+    const def = this.#getDefaults;
+    const given = this.#getGiven;
+    return this.#mergeOptions(def, given);
   }
 
   /**
    * Sets default properties on an object that aren't already specified.
    *
-   * @returns {object} Merged client options with defaults
+   * @param {object} def Default properties
+   * @param {object} given Object to assign defaults to
+   * @returns {object}
    * @private
    */
-  static #mergeOptions() {
-    // ! rewrite in the future.
-    const def = this.#createDefaults;
-    const given = {
-      DEBUG_MODE: process.env.DEBUG_MODE,
-      DEVELOPMENT: process.env.DEVELOPMENT,
-      CLIENT_ACCESS_TOKEN: process.env.CLIENT_ACCESS_TOKEN,
-      DB_IP: process.env.DB_IP,
-      DB_PORT: process.env.DB_PORT,
-      DB_NAME: process.env.DB_NAME,
-      DB_USERNAME: process.env.DB_USERNAME,
-      DB_PASSWORD: process.env.DB_PASSWORD,
-    };
-
+  static #mergeOptions(def, given) {
     if (!given) return def;
     for (const key in def) {
       if (!Object.hasOwn(given, key) || given[key] === undefined) {
@@ -60,23 +52,48 @@ export class Options extends null {
 
     return given;
   }
-
   /**
    * The default client options.
    *
    * @returns {object} Default options for the client
    * @private
    */
-  static get #createDefaults() {
+  static get #getDefaults() {
     return {
-      DEBUG_MODE: false,
-      DEVELOPMENT: true,
-      CLIENT_ACCESS_TOKEN: undefined,
-      DB_IP: '127.0.0.1',
-      DB_PORT: 27017,
-      DB_NAME: 'CuttingEdge',
-      DB_USERNAME: '',
-      DB_PASSWORD: '',
+      settings: {
+        debugMode: false,
+      },
+      clientAccessToken: undefined,
+      db: {
+        ip: '127.0.0.1',
+        port: 27017,
+        name: 'CuttingEdge',
+        username: undefined,
+        password: undefined,
+      },
+    };
+  }
+
+  /**
+   * The given client options.
+   *
+   * @returns {object} Given options for the client
+   * @private
+   */
+  static get #getGiven() {
+    // ! Add twitch, youtube and some API
+    return {
+      settings: {
+        debugMode: process.env.DEBUG_MODE,
+      },
+      clientAccessToken: process.env.CLIENT_ACCESS_TOKEN,
+      db: {
+        ip: process.env.DB_IP,
+        port: process.env.DB_PORT,
+        name: process.env.DB_NAME,
+        username: process.env.DB_USERNAME,
+        password: process.env.DB_PASSWORD,
+      },
     };
   }
 }

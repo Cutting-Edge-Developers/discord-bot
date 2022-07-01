@@ -32,7 +32,9 @@
     "url": "https://github.com/Cutting-Edge-Developers/discord-bot/issues"
   },
   "dependencies": {
-    "@cuttingedge/database": "workspace:^"
+    "@cuttingedge/database": "workspace:^",
+    "@cuttingedge/utility": "workspace:^",
+    "@cuttingedge/updater": "workspace:^"
   },
   "devDependencies": {
     "eslint": "^8.18.0",

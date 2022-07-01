@@ -9,7 +9,7 @@ export class Util extends null {
    * @param  {Array} args Second and more given arrays
    * @returns {Array}
    */
-  static mergeArray(array, ...args) {
+  static mergeArrays(array, ...args) {
     return array.concat(...args);
   }
   /**
