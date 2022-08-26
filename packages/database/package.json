@@ -32,7 +32,7 @@
     "url": "https://github.com/Cutting-Edge-Developers/discord-bot/issues"
   },
   "dependencies": {
-    "mongoose": "^6.4.0"
+    "mongoose": "^6.4.6"
   },
   "devDependencies": {
     "eslint": "^8.18.0",
