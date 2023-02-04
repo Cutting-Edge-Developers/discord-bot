@@ -241,9 +241,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@cuttingedge/bot@workspace:packages/bot"
   dependencies:
-    "@discordjs/rest": ^0.5.0
     bufferutil: ^4.0.6
-    discord-api-types: ^0.35.0
     discord.js: ^13.8.1
     erlpack: "github:discord/erlpack"
     eslint: ^8.18.0
@@ -277,6 +275,8 @@ __metadata:
   resolution: "@cuttingedge/engine@workspace:packages/engine"
   dependencies:
     "@cuttingedge/database": "workspace:^"
+    "@cuttingedge/updater": "workspace:^"
+    "@cuttingedge/utility": "workspace:^"
     eslint: ^8.18.0
     eslint-plugin-import: ^2.26.0
     eslint-plugin-jsdoc: ^39.3.3
@@ -286,11 +286,10 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@cuttingedge/updater@workspace:packages/updater":
+"@cuttingedge/updater@workspace:^, @cuttingedge/updater@workspace:packages/updater":
   version: 0.0.0-use.local
   resolution: "@cuttingedge/updater@workspace:packages/updater"
   dependencies:
-    "@cuttingedge/database": "workspace:^"
     eslint: ^8.18.0
     eslint-plugin-import: ^2.26.0
     eslint-plugin-jsdoc: ^39.3.3
@@ -300,11 +299,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@cuttingedge/utility@workspace:packages/utility":
+"@cuttingedge/utility@workspace:^, @cuttingedge/utility@workspace:packages/utility":
   version: 0.0.0-use.local
   resolution: "@cuttingedge/utility@workspace:packages/utility"
   dependencies:
-    "@cuttingedge/database": "workspace:^"
+    "@discordjs/rest": ^0.5.0
+    discord-api-types: ^0.35.0
     dotenv: ^16.0.1
     eslint: ^8.18.0
     eslint-plugin-import: ^2.26.0
@@ -2625,9 +2625,9 @@ __metadata:
   linkType: hard
 
 "http-cache-semantics@npm:^4.0.0, http-cache-semantics@npm:^4.1.0":
-  version: 4.1.0
-  resolution: "http-cache-semantics@npm:4.1.0"
-  checksum: 974de94a81c5474be07f269f9fd8383e92ebb5a448208223bfb39e172a9dbc26feff250192ecc23b9593b3f92098e010406b0f24bd4d588d631f80214648ed42
+  version: 4.1.1
+  resolution: "http-cache-semantics@npm:4.1.1"
+  checksum: 83ac0bc60b17a3a36f9953e7be55e5c8f41acc61b22583060e8dedc9dd5e3607c823a88d0926f9150e571f90946835c7fe150732801010845c72cd8bbff1a236
   languageName: node
   linkType: hard
 
